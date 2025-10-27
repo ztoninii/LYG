@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="@LYGResale - Memorabilia Esportiva Premium, 100% Autenticada e Certificada">
+    <meta name="theme-color" content="#0f1419">
+    <title>@LYGResale - Instagram Premium</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #d4af37;
+            --primary-light: #f4d03f;
+            --dark-bg: #0f1419;
+            --dark-secondary: #1a202c;
+            --dark-tertiary: #2d3748;
+            --text-primary: #f7fafc;
+            --text-secondary: #cbd5e0;
+            --accent: #00d4ff;
+            --success: #48bb78;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1f2e 100%);
+            color: var(--text-primary);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .instagram-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* ==================== PROFILE HEADER ==================== */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            padding: 50px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            margin-bottom: 50px;
+            animation: fadeInDown 0.6s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+            font-weight: 800;
+            color: var(--dark-bg);
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.5), inset 0 0 30px rgba(255, 255, 255, 0.1);
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-pic::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-username {
+            font-size: 32px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .verified-badge {
+            color: var(--primary);
+            font-size: 28px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .follow-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--dark-bg);
+            border: none;
+            padding: 10px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .follow-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+        }
+
+        .follow-btn:active {
+            transform: translateY(0);
+        }
+
+        .profile-stats {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .profile-stats span {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .profile-bio {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .profile-bio strong {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-size: 15px;
+        }
+
+        .profile-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .profile-link::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .profile-link:hover::after {
+            width: 100%;
+        }
+
+        /* ==================== STORIES ==================== */
+        .stories {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 30px 0;
+            margin-bottom: 40px;
+            scrollbar-width: none;
+        }
+
+        .stories::-webkit-scrollbar {
+            display: none;
+        }
+
+        .story {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .story:hover {
+            transform: translateY(-5px);
+        }
+
+        .story-ring {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .story:hover .story-ring {
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+            transform: scale(1.05);
+        }
+
+        .story-pic {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(26, 32, 44, 0.9) 0%, rgba(15, 20, 25, 0.9) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            border: 3px solid var(--dark-bg);
+        }
+
+        .story-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-align: center;
+            max-width: 90px;
+            transition: color 0.3s ease;
+        }
+
+        .story:hover .story-label {
+            color: var(--primary);
+        }
+
+        /* ==================== POSTS GRID ==================== */
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .post {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, rgba(26, 32, 44, 0.8) 0%, rgba(15, 20, 25, 0.8) 100%);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .post:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .post::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.5s ease;
+            z-index: 1;
+        }
+
+        .post:hover::before {
+            left: 100%;
+        }
+
+        .post-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 140px;
+            opacity: 0.08;
+            filter: blur(3px);
+            z-index: 0;
+        }
+
+        .post-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .post:hover .post-content {
+            transform: scale(1.05);
+        }
+
+        .post-icon {
+            font-size: 90px;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 4px 15px rgba(212, 175, 55, 0.3));
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .post:hover .post-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .post-title {
+            color: var(--primary);
+            font-size: 15px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .post-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.95) 0%, rgba(244, 208, 63, 0.95) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            gap: 15px;
+            color: var(--dark-bg);
+            font-weight: 700;
+            z-index: 5;
+            backdrop-filter: blur(5px);
+        }
+
+        .post:hover .post-overlay {
+            opacity: 1;
+        }
+
+        .post-stats {
+            display: flex;
+            gap: 30px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .post-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 18px 15px;
+            background: linear-gradient(to top, rgba(15, 20, 25, 0.98), rgba(15, 20, 25, 0.7), transparent);
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--text-secondary);
+            z-index: 3;
+            max-height: 100%;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .post:hover .post-caption {
+            background: linear-gradient(to top, rgba(15, 20, 25, 0.99), rgba(15, 20, 25, 0.8), transparent);
+        }
+
+        .carousel-indicator {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            color: var(--text-primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            z-index: 4;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .post:hover .carousel-indicator {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.6);
+        }
+
+        .authentic-seal {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--dark-bg);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .hashtags {
+            color: var(--primary);
+            font-size: 11px;
+            margin-top: 6px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        /* ==================== RESPONSIVE DESIGN ==================== */
+        @media (max-width: 900px) {
+            .profile-header {
+                gap: 40px;
+                padding: 40px 0;
+            }
+
+            .profile-pic {
+                width: 140px;
+                height: 140px;
+                font-size: 50px;
+            }
+
+            .profile-username {
+                font-size: 24px;
+            }
+
+            .profile-stats {
+                gap: 30px;
+            }
+
+            .posts-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+                padding: 30px 0;
+                margin-bottom: 30px;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+                font-size: 40px;
+            }
+
+            .profile-username {
+                font-size: 20px;
+                justify-content: center;
+            }
+
+            .profile-stats {
+                justify-content: center;
+                gap: 20px;
+                font-size: 13px;
+            }
+
+            .profile-info {
+                width: 100%;
+            }
+
+            .follow-btn {
+                width: 100%;
+            }
+
+            .stories {
+                gap: 15px;
+                padding: 20px 0;
+            }
+
+            .story-ring {
+                width: 75px;
+                height: 75px;
+            }
+
+            .story-pic {
+                font-size: 28px;
+            }
+
+            .story-label {
+                font-size: 11px;
+            }
+
+            .posts-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 10px;
+            }
+
+            .post-icon {
+                font-size: 60px;
+            }
+
+            .post-title {
+                font-size: 13px;
+            }
+
+            .post-caption {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .profile-header {
+                padding: 20px 0;
+                margin-bottom: 20px;
+            }
+
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+                font-size: 35px;
+            }
+
+            .profile-username {
+                font-size: 18px;
+            }
+
+            .profile-stats {
+                gap: 15px;
+                font-size: 12px;
+            }
+
+            .profile-bio {
+                font-size: 13px;
+            }
+
+            .stories {
+                gap: 12px;
+                padding: 15px 0;
+            }
+
+            .story-ring {
+                width: 65px;
+                height: 65px;
+            }
+
+            .story-pic {
+                font-size: 24px;
+            }
+
+            .posts-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .post-icon {
+                font-size: 50px;
+            }
+
+            .post-title {
+                font-size: 12px;
+            }
+
+            .post-stats {
+                gap: 20px;
+                font-size: 14px;
+            }
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .story:nth-child(1) { animation-delay: 0.1s; }
+        .story:nth-child(2) { animation-delay: 0.2s; }
+        .story:nth-child(3) { animation-delay: 0.3s; }
+        .story:nth-child(4) { animation-delay: 0.4s; }
+        .story:nth-child(5) { animation-delay: 0.5s; }
+        .story:nth-child(6) { animation-delay: 0.6s; }
+        .story:nth-child(7) { animation-delay: 0.7s; }
+        .story:nth-child(8) { animation-delay: 0.8s; }
+
+        .post:nth-child(1) { animation-delay: 0.1s; }
+        .post:nth-child(2) { animation-delay: 0.15s; }
+        .post:nth-child(3) { animation-delay: 0.2s; }
+        .post:nth-child(4) { animation-delay: 0.25s; }
+        .post:nth-child(5) { animation-delay: 0.3s; }
+        .post:nth-child(6) { animation-delay: 0.35s; }
+        .post:nth-child(7) { animation-delay: 0.4s; }
+        .post:nth-child(8) { animation-delay: 0.45s; }
+        .post:nth-child(9) { animation-delay: 0.5s; }
+        .post:nth-child(10) { animation-delay: 0.55s; }
+        .post:nth-child(11) { animation-delay: 0.6s; }
+        .post:nth-child(12) { animation-delay: 0.65s; }
+    </style>
+</head>
+<body>
+    <div class="instagram-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="profile-pic">LYG</div>
+            <div class="profile-info">
+                <div class="profile-username">
+                    @LYGResale
+                    <span class="verified-badge">✓</span>
+                </div>
+                <div class="profile-stats">
+                    <div><span>247</span> publicações</div>
+                    <div><span>8.5M</span> seguidores</div>
+                    <div><span>89</span> seguindo</div>
+                </div>
+                <div class="profile-bio">
+                    <strong>LYG Resale Enterprise</strong>
+                    🏆 Memorabilia Esportiva Premium<br>
+                    💯 Itens 100% Autenticados e Certificados<br>
+                    📈 Invista na História do Esporte<br>
+                    <a href="#" class="profile-link">www.LYGResale.com</a>
+                </div>
+                <button class="follow-btn">Seguir</button>
+            </div>
+        </div>
+
+        <!-- Stories -->
+        <div class="stories">
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-pic">⚽</div>
+                </div>
+                <span class="story-label">Futebol</span>
+            </div>
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-pic">🏀</div>
+                </div>
+                <span class="story-label">Basquete</span>
+            </div>
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-pic">🏎️</div>
+                </div>
+                <span class="story-label">Fórmula 1</span>
+            </div>
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-pic">🎾</div>
+                </div>
+                <span class="story-label">Tênis</span>
+            </div>
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-pic">🥊</div>
+                </div>
+                <span class="story-label">Boxe & MMA</span>
+            </div>
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-pic">💎</div>
+                </div>
+                <span class="story-label">Certificação</span>
+            </div>
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-pic">📈</div>
+                </div>
+                <span class="story-label">Investimento</span>
+            </div>
+            <div class="story">
+                <div class="story-ring">
+                    <div class="story-pic">🎥</div>
+                </div>
+                <span class="story-label">Bastidores</span>
+            </div>
+        </div>
+
+        <!-- Posts Grid -->
+        <div class="posts-grid">
+            <!-- Post 1: Camisa da Final 98 -->
+            <div class="post">
+                <div class="post-bg">⚽</div>
+                <div class="carousel-indicator">📸 1/5</div>
+                <div class="authentic-seal">✓ Autenticado</div>
+                <div class="post-content">
+                    <div class="post-icon">⚽</div>
+                    <div class="post-title">MANTO DA FINAL DE 98</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 287K</span>
+                        <span>💬 5.2K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    O Manto da Final de 98. Autenticado e Certificado PSA/JSA. A assinatura que vale milhões. 🏆
+                    <div class="hashtags">#MemorabiliaEsportiva #CamisaAutografada #LYGResale</div>
+                </div>
+            </div>
+
+            <!-- Post 2: Processo de Certificação -->
+            <div class="post">
+                <div class="post-bg">💎</div>
+                <div class="carousel-indicator">📸 1/6</div>
+                <div class="post-content">
+                    <div class="post-icon">💎</div>
+                    <div class="post-title">CERTIFICAÇÃO</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 156K</span>
+                        <span>💬 3.4K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    Por que a Certificação é o seu maior Ativo. Transparência é o nosso luxo. Garantia de procedência. 💯
+                    <div class="hashtags">#CertificadoDeAutenticidade #InvestimentoEmEsporte</div>
+                </div>
+            </div>
+
+            <!-- Post 3: Volante F1 -->
+            <div class="post">
+                <div class="post-bg">🏎️</div>
+                <div class="authentic-seal">✓ Autenticado</div>
+                <div class="post-content">
+                    <div class="post-icon">🏎️</div>
+                    <div class="post-title">VOLANTE DE MÔNACO</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 342K</span>
+                        <span>💬 7.8K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    Velocidade, história, exclusividade. Volante usado na vitória de Mônaco 2010. Autenticado. 🏁
+                    <div class="hashtags">#Formula1 #F1Memorabilia #Exclusividade</div>
+                </div>
+            </div>
+
+            <!-- Post 4: História do Basquete -->
+            <div class="post">
+                <div class="post-bg">🏀</div>
+                <div class="post-content">
+                    <div class="post-icon">🏀</div>
+                    <div class="post-title">LENDAS DO BASQUETE</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 198K</span>
+                        <span>💬 4.1K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    O Legado. A Paixão. A Memorabilia. Por que colecionar é preservar a história. 🐐
+                    <div class="hashtags">#NBAcolecionaveis #HistoriaDoEsporte #Colecionadores</div>
+                </div>
+            </div>
+
+            <!-- Post 5: Mercado em Números -->
+            <div class="post">
+                <div class="post-bg">📈</div>
+                <div class="post-content">
+                    <div class="post-icon">📈</div>
+                    <div class="post-title">MERCADO 300%</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 124K</span>
+                        <span>💬 2.9K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    O mercado de memorabilia cresceu 300% na última década. Não é hobby, é investimento. 📊
+                    <div class="hashtags">#InvestimentoEmEsporte #ItensRaros #ArtigosDeLuxo</div>
+                </div>
+            </div>
+
+            <!-- Post 6: Jersey MJ -->
+            <div class="post">
+                <div class="post-bg">🏀</div>
+                <div class="carousel-indicator">📸 1/3</div>
+                <div class="authentic-seal">✓ Autenticado</div>
+                <div class="post-content">
+                    <div class="post-icon">🏀</div>
+                    <div class="post-title">JERSEY MJ '96</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 412K</span>
+                        <span>💬 9.6K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    Jersey autografada do MJ - Edição Bulls '96. A história que você pode ter. 🐐
+                    <div class="hashtags">#NBAcolecionaveis #BasqueteBrasil #PeçaUnica</div>
+                </div>
+            </div>
+
+            <!-- Post 7: Unboxing Premium -->
+            <div class="post">
+                <div class="post-bg">📦</div>
+                <div class="carousel-indicator">Story</div>
+                <div class="post-content">
+                    <div class="post-icon">📦</div>
+                    <div class="post-title">UNBOXING</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 167K</span>
+                        <span>💬 3.2K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    Chegou a encomenda mais rara do mês! Veja o unboxing completo nos stories. 🎁
+                    <div class="hashtags">#LYGResale #ResaleDeLuxo #MemorabiliaAutenticada</div>
+                </div>
+            </div>
+
+            <!-- Post 8: Luvas Muhammad Ali -->
+            <div class="post">
+                <div class="post-bg">🥊</div>
+                <div class="authentic-seal">✓ Autenticado</div>
+                <div class="post-content">
+                    <div class="post-icon">🥊</div>
+                    <div class="post-title">LUVAS ALI</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 389K</span>
+                        <span>💬 8.1K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    Luvas históricas de Muhammad Ali. Peça de museu. A força que mudou o mundo. 🥊
+                    <div class="hashtags">#BoxeHistorico #MemorabiliaEsportiva #Luxo</div>
+                </div>
+            </div>
+
+            <!-- Post 9: Quiz História -->
+            <div class="post">
+                <div class="post-bg">❓</div>
+                <div class="carousel-indicator">Enquete</div>
+                <div class="post-content">
+                    <div class="post-icon">❓</div>
+                    <div class="post-title">QUIZ HISTÓRIA</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 93K</span>
+                        <span>💬 12.4K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    Qual destes itens é o mais valioso hoje? Vote nos stories e descubra! 🏆
+                    <div class="hashtags">#Colecionadores #HistoriaDoEsporte #FutebolArte</div>
+                </div>
+            </div>
+
+            <!-- Post 10: Raquete Wimbledon -->
+            <div class="post">
+                <div class="post-bg">🎾</div>
+                <div class="authentic-seal">✓ Autenticado</div>
+                <div class="post-content">
+                    <div class="post-icon">🎾</div>
+                    <div class="post-title">WIMBLEDON 2023</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 145K</span>
+                        <span>💬 2.8K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    Raquete de Wimbledon 2023. Certificada e com história. A tradição do tênis. 🏆
+                    <div class="hashtags">#MemorabiliaEsportiva #ItensRaros #Exclusividade</div>
+                </div>
+            </div>
+
+            <!-- Post 11: Bola Recorde -->
+            <div class="post">
+                <div class="post-bg">⚽</div>
+                <div class="carousel-indicator">📸 1/4</div>
+                <div class="post-content">
+                    <div class="post-icon">⚽</div>
+                    <div class="post-title">BOLA RECORDE</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 267K</span>
+                        <span>💬 6.3K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    A Bola do Recorde. Presenciou o momento histórico que marcou gerações. Raridade absoluta. ⚽
+                    <div class="hashtags">#FutebolArte #MemorabiliaEsportiva #HistoriaDoEsporte</div>
+                </div>
+            </div>
+
+            <!-- Post 12: Tênis Jordan -->
+            <div class="post">
+                <div class="post-bg">👟</div>
+                <div class="carousel-indicator">📸 1/2</div>
+                <div class="authentic-seal">✓ Autenticado</div>
+                <div class="post-content">
+                    <div class="post-icon">👟</div>
+                    <div class="post-title">AIR JORDAN 1</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-stats">
+                        <span>❤️ 521K</span>
+                        <span>💬 14.2K</span>
+                    </div>
+                </div>
+                <div class="post-caption">
+                    Air Jordan 1 Original. Edição limitada. O tênis que revolucionou o basquete e a moda. 🔥
+                    <div class="hashtags">#NBAcolecionaveis #Sneakers #Luxo</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth interactions and animations
+        document.querySelectorAll('.story, .post').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.animation = 'none';
+            });
+        });
+
+        // Add click interaction for posts (optional)
+        document.querySelectorAll('.post').forEach(post => {
+            post.addEventListener('click', function() {
+                console.log('Post clicked - Implementar modal ou navegação aqui');
+            });
+        });
+
+        // Add click interaction for stories (optional)
+        document.querySelectorAll('.story').forEach(story => {
+            story.addEventListener('click', function() {
+                console.log('Story clicked - Implementar visualização de story aqui');
+            });
+        });
+    </script>
+</body>
+</html>
+
